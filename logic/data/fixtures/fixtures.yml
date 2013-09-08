@@ -1,0 +1,154 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+
+sfGuardUser:
+    contabilidad01:
+      username: contabilidad01
+      password: changeme
+
+    contabilidad02:
+      username: contabilidad02
+      password: changeme
+      
+    produccion01:
+      username: produccion01
+      password: changeme
+
+    produccion02:
+      username: produccion02
+      password: changeme
+
+    comercial01:
+      username: comercial01
+      password: changeme
+
+    comercial02:
+      username: comercial02
+      password: changeme
+
+    callcenter01:
+      username: callcenter01
+      password: changeme
+
+    callcenter02:
+      username: callcenter02
+      password: changeme
+
+    admin:
+      username: admin
+      password: changeme
+      is_super_admin: 1
+
+sfGuardPermission:
+    pares:
+      name: pares
+      description: pares
+
+    impares:
+      name: impares
+      description: impares      
+      
+sfGuardGroup:
+    contabilidad:
+      name: Contabilidad
+      description: Contabilidad
+    
+    produccion:
+      name: Produccion
+      description: Produccion
+    
+    comercial:
+      name: Comercial
+      description: Comercial
+      
+    callcenter:
+      name: Callcenter
+      description: Callcenter
+      
+sfGuardUserGroup:
+    ug_c1:
+      user_id : contabilidad01
+      group_id: contabilidad
+
+    ug_c2:
+      user_id : contabilidad02
+      group_id: contabilidad
+      
+    ug_p1:
+      user_id : produccion01
+      group_id: produccion
+
+    ug_p2:
+      user_id : produccion02
+      group_id: produccion
+      
+    ug_com1:
+      user_id : comercial01
+      group_id: comercial
+
+    ug_com2:
+      user_id : comercial02
+      group_id: comercial
+      
+    ug_cc1:
+      user_id : callcenter01
+      group_id: callcenter
+
+    ug_cc2:
+      user_id : callcenter02
+      group_id: callcenter
+      
+sfGuardUserPermission:
+    up_c1:
+      user_id : contabilidad01
+      permission_id: impares
+
+    up_c2:
+      user_id : contabilidad02
+      permission_id: pares
+
+    up_p1-i:
+      user_id : produccion01
+      permission_id: impares
+    up_p1-p:
+      user_id : produccion01
+      permission_id: pares
+
+    up_p2:
+      user_id : produccion02
+      permission_id: pares
+
+    up_com1:
+      user_id : comercial01
+      permission_id: impares
+
+    up_com2-p:
+      user_id : comercial02
+      permission_id: pares
+
+    up_com2-i:
+      user_id : comercial02
+      permission_id: impares
+
+    up_cc1:
+      user_id : callcenter01
+      permission_id: impares
+
+    up_cc2:
+      user_id : callcenter02
+      permission_id: pares

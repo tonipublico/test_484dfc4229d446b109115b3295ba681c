@@ -1,0 +1,6 @@
+# default values
+all:
+  sf_guard_plugin:
+    success_signin_url:  '@menu_backend_root'
+    
+  menu_backend_ttl: 1024
